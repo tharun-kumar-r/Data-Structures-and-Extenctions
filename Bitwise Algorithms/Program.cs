@@ -26,6 +26,7 @@ using Bitwise_Algorithms;
         BitwiseXor.FindTwoNonRepeatingElements(arr);
 
         Console.WriteLine("\n-------------------------------------------\n");
+
         var queue = new ThreadSafeQueue<int>();
 
 

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tree Data Structures", "Tree Data Structures\Tree Data Structures.csproj", "{7DE8B02F-A9BA-4ED6-965A-40BECB173E74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitwise Algorithms", "Bitwise Algorithms\Bitwise Algorithms.csproj", "{2D10F7CB-A95C-4552-A7EF-9CD0FBD8838A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitwise Algorithms", "Bitwise Algorithms\Bitwise Algorithms.csproj", "{2D10F7CB-A95C-4552-A7EF-9CD0FBD8838A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking_System", "Banking_System\Banking_System.csproj", "{5BD831C2-EF84-45BB-A7B0-CE4B06E2A47C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2D10F7CB-A95C-4552-A7EF-9CD0FBD8838A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D10F7CB-A95C-4552-A7EF-9CD0FBD8838A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D10F7CB-A95C-4552-A7EF-9CD0FBD8838A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD831C2-EF84-45BB-A7B0-CE4B06E2A47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD831C2-EF84-45BB-A7B0-CE4B06E2A47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD831C2-EF84-45BB-A7B0-CE4B06E2A47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD831C2-EF84-45BB-A7B0-CE4B06E2A47C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
