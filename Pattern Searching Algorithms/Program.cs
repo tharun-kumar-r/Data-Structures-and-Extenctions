@@ -15,8 +15,10 @@ class Program
         int prime = 101;
         Console.WriteLine($"\nRabinKarp Searcgh Algorithem ith input Text: {text} And Pattern: {pattern}");
         RabinKarpSearch_Algorithms.RabinKarpSearch(text, pattern, prime);
-        
 
+        Console.WriteLine($"\nKMP Algorithm ith input Text: {text} And Pattern: {pattern}");
+
+        KMPSearch_Algorithem.KMPSearch(pattern, text);
     }
 
 
