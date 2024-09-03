@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking_System", "Banking_S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pattern Searching Algorithms", "Pattern Searching Algorithms\Pattern Searching Algorithms.csproj", "{E1C67A03-77C3-4156-8C49-668E16297245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic Programming", "Dynamic Programming\Dynamic Programming.csproj", "{E7A6F55F-B6DC-4186-9780-F80D2BE1C72B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic Programming", "Dynamic Programming\Dynamic Programming.csproj", "{E7A6F55F-B6DC-4186-9780-F80D2BE1C72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic Programming Algorithms", "Dynamic Programming Algorithms\Dynamic Programming Algorithms.csproj", "{4AAFDD2F-5D3E-4C01-9503-1B8DF581D9B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E7A6F55F-B6DC-4186-9780-F80D2BE1C72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7A6F55F-B6DC-4186-9780-F80D2BE1C72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7A6F55F-B6DC-4186-9780-F80D2BE1C72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AAFDD2F-5D3E-4C01-9503-1B8DF581D9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAFDD2F-5D3E-4C01-9503-1B8DF581D9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAFDD2F-5D3E-4C01-9503-1B8DF581D9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAFDD2F-5D3E-4C01-9503-1B8DF581D9B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

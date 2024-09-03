@@ -1,49 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Dynamic_Programming
+class LCS
 {
-    internal class longest_common
+       static string LongestCommonSubsequence(string A, string B)
     {
+        int m = A.Length;
+        int n = B.Length;
 
-                static int LongestCommonSubsequence(string A, string B)
-        {
-            int m = A.Length;
-            int n = B.Length;
+       
+        int[,] dp = new int[m + 1, n + 1];
 
       
-            int[,] dp = new int[m + 1, n + 1];
-
-           
-            for (int i = 0; i <= m; i++)
+        for (int i = 0; i <= m; i++)
+        {
+            for (int j = 0; j <= n; j++)
             {
-                for (int j = 0; j <= n; j++)
-                {
-                    if (i == 0 || j == 0)
-                        dp[i, j] = 0;
-                    else if (A[i - 1] == B[j - 1])
-                        dp[i, j] = dp[i - 1, j - 1] + 1;
-                    else
-                        dp[i, j] = Math.Max(dp[i - 1, j], dp[i, j - 1]);
-                }
+                if (i == 0 || j == 0)
+                    dp[i, j] = 0;
+                else if (A[i - 1] == B[j - 1])
+                    dp[i, j] = dp[i - 1, j - 1] + 1;
+                else
+                    dp[i, j] = Math.Max(dp[i - 1, j], dp[i, j - 1]);
             }
-
-      
-            return dp[m, n];
         }
 
-        static void Main()
+        int index = dp[m, n];
+        char[] lcs = new char[index]; 
+              
+        int aIndex = m, bIndex = n;
+        while (aIndex > 0 && bIndex > 0)
         {
-            string A = "aabcdefghij";
-            string B = "ecdgi";
-
-            int lcsLength = LongestCommonSubsequence(A, B);
-            Console.WriteLine("Length of Longest Common Subsequence: " + lcsLength);
+           
+            if (A[aIndex - 1] == B[bIndex - 1])
+            {
+                lcs[index - 1] = A[aIndex - 1]; 
+                aIndex--;
+                bIndex--;
+                index--;
+            }
+           
+            else if (dp[aIndex - 1, bIndex] > dp[aIndex, bIndex - 1])
+                aIndex--;
+            else
+                bIndex--;
         }
+               
+        return new string(lcs);
     }
-
+        static void Main()
+    {
+        string A = "aabcdefghij";
+        string B = "ecdgi";
+        string lcsString = LongestCommonSubsequence(A, B);
+        Console.WriteLine("Longest Common Subsequence: " + lcsString);
+    }
 }
-
