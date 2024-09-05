@@ -3,8 +3,46 @@ using System;
 
 
 class Program
-{
-    public static void Main()
+{    public class students
+    {
+        public int regno { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+        public String brachid { get; set; }
+        public string sem { get; set; }
+    }
+
+    public class branch
+    {
+        public int b_id { get; set; }
+        public string b_name { get; set; }
+    }
+
+    public static void Main(string[] args)
+    {
+        List<students> std = new List<students>{
+                new students{ regno =  1, name = "Tharun", email = "rajtharunir@gmail.com", sem="3", brachid="1"},
+                new students{ regno =  2, name = "kumar", email = "kumar@gmail.com",sem="3", brachid="2"},
+                new students{ regno =  3, name = "Mahesh", email = "mahesh@gmail.com", sem="1", brachid="1"},
+                new students{ regno =  4, name = "Madhan", email = "madhan@gmail.com", sem="1", brachid="1"}
+
+
+            };
+
+        List<branch> brnch = new List<branch> {
+                new branch { b_id = 1, b_name = "CSE" }, new branch { b_id = 2, b_name = "EC"} };
+
+
+        std.Select(x=> x).OrderBy(x => x.sem).ToList().ForEach(z => Console.WriteLine($"Regno: {z.regno} | Name: {z.name} | Email: {z.email} | Sem: {z.sem} | Branch: { brnch.Where(x => x.b_id == Convert.ToInt32(z.brachid)).Select(s => s.b_name).FirstOrDefault() }"));
+        
+
+
+        
+
+    }
+
+
+    public static void test()
     {
         List<Person> prson = new List<Person>
         {
