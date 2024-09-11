@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data First Approach", "Entityframework CURD\Data First Approach.csproj", "{997023A1-BE66-496B-909C-90E2203AE8F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code First Approach", "Code First Approach\Code First Approach.csproj", "{86588274-4716-4359-A8D2-4264ABCF419D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{997023A1-BE66-496B-909C-90E2203AE8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997023A1-BE66-496B-909C-90E2203AE8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997023A1-BE66-496B-909C-90E2203AE8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997023A1-BE66-496B-909C-90E2203AE8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86588274-4716-4359-A8D2-4264ABCF419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86588274-4716-4359-A8D2-4264ABCF419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86588274-4716-4359-A8D2-4264ABCF419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86588274-4716-4359-A8D2-4264ABCF419D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D7C7DC-3E25-401A-903E-EE5B3F2F886F}
+	EndGlobalSection
+EndGlobal
