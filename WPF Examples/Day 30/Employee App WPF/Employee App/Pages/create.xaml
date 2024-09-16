@@ -1,0 +1,57 @@
+﻿<Page x:Class="Employee_App.create"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Employee_App"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="create">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="152"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="256"/>
+        </Grid.RowDefinitions>
+
+        <materialDesign:Card Grid.ColumnSpan="3" Margin="10">
+            <StackPanel>
+                <TextBlock Text="Create Employee" Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+                <Separator Style="{StaticResource MaterialDesignSeparator}"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <TextBlock Text="First Name" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,43,0,0" Grid.Row="0"/>
+        <TextBox x:Name="firstname" Style="{StaticResource MaterialDesignTextBox}" Margin="10,76,0,0" Grid.Row="0" Width="200" Height="40"/>
+
+        <TextBlock Text="Middle Name" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,38,0,0" Grid.Row="0" Grid.Column="1"/>
+        <TextBox x:Name="middlename" Style="{StaticResource MaterialDesignTextBox}" Margin="10,76,0,0" Grid.Row="0" Grid.Column="1" Width="200" Height="40"/>
+
+        <TextBlock Text="Last Name" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,38,0,0" Grid.Row="0" Grid.Column="2"/>
+        <TextBox x:Name="lastname" Style="{StaticResource MaterialDesignTextBox}" Margin="10,76,0,0" Grid.Row="0" Grid.Column="2" Width="200" Height="40"/>
+
+        <TextBlock Text="Gender" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,17,0,0" Grid.Row="1"/>
+        <RadioButton x:Name="malea" Content="Male" Style="{StaticResource MaterialDesignRadioButton}" Margin="18,0,0,0" Grid.Row="1"/>
+        <RadioButton x:Name="female" Content="Female" Style="{StaticResource MaterialDesignRadioButton}" Margin="90,0,0,0" Grid.Row="1"/>
+
+        <TextBlock Text="Country" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,17,0,0" Grid.Row="1" Grid.Column="1"/>
+        <ComboBox x:Name="country" Style="{StaticResource MaterialDesignComboBox}" Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" Width="200" Height="40">
+            <ComboBoxItem>India</ComboBoxItem>
+            <ComboBoxItem>USA</ComboBoxItem>
+            <ComboBoxItem>China</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Date" Style="{StaticResource MaterialDesignBody1TextBlock}" Margin="10,4,0,0" Grid.Row="2"/>
+        <DatePicker x:Name="datetimeA" Style="{StaticResource MaterialDesignDatePicker}" Margin="10,43,0,0" Grid.Row="2" Width="200" Height="40"/>
+
+        <Button Content="Create Employee" Style="{StaticResource MaterialDesignRaisedButton}" Margin="57,0,0,0" Grid.Row="2" Grid.Column="2" Width="137" Height="40" Click="Button_Click_1"/>
+    </Grid>
+</Page>
+
