@@ -1,0 +1,144 @@
+<div class="container">
+    <h2>Edit Employee</h2>
+    <form #employeeForm="ngForm" (ngSubmit)="updateEmployee(employeeForm)" novalidate>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.firstName" name="firstName" placeholder="Enter first name" required>
+            <label for="firstName">First Name</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['firstName']?.valid" class="invalid-feedback">
+              Please enter your first name.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="middleName" [(ngModel)]="employee.middleName" name="middleName" placeholder="Enter middle name">
+            <label for="middleName">Middle Name</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="employee.lastName" name="lastName" placeholder="Enter last name" required>
+            <label for="lastName">Last Name</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['lastName']?.valid" class="invalid-feedback">
+              Please enter your last name.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="contact" [(ngModel)]="employee.contact" name="contact" placeholder="Enter contact number" required>
+            <label for="contact">Contact No</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['contact']?.valid" class="invalid-feedback">
+              Please enter a valid contact number.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" [(ngModel)]="employee.email" name="email" placeholder="Enter email" required>
+            <label for="email">Email</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['email']?.valid" class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="datetime-local" class="form-control" id="date" [(ngModel)]="employee.dateOfBirth" name="date" required>
+            <label for="date">Date Of Birth</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['date']?.valid" class="invalid-feedback">
+              Please select your date of birth.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <select class="form-select" id="department" [(ngModel)]="employee.department" name="department" required>
+              <option value="" disabled>Select Department</option>
+              <option value="IT">IT</option>
+              <option value="HR">HR</option>
+              <option value="Finance">Finance</option>
+              <option value="Marketing">Marketing</option>
+            </select>
+            <label for="department">Department</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['department']?.valid" class="invalid-feedback">
+              Please select a department.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="address" [(ngModel)]="employee.address" name="address" placeholder="Enter Address" required></textarea>
+            <label for="address">Address</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['address']?.valid" class="invalid-feedback">
+              Please enter your address.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" id="male" [(ngModel)]="employee.gender" value="Male" required> Male
+            <input type="radio" name="gender" id="female" [(ngModel)]="employee.gender" value="Female" class="ms-3" required> Female
+            <div *ngIf="employeeForm.submitted && !employee.gender" class="invalid-feedback">
+              Please select your gender.
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" [(ngModel)]="employee.password" name="password" placeholder="Password" required>
+            <label for="password">Password</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['password']?.valid" class="invalid-feedback">
+              Please provide a password.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="profile" [(ngModel)]="employee.profilePicture" name="profile" required>
+            <label for="profile">Profile Picture</label>
+            <div *ngIf="employeeForm.submitted && !employeeForm.controls['profile']?.valid" class="invalid-feedback">
+              Please upload a profile picture.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>
+            <input type="checkbox" [(ngModel)]="employee.termsAccepted" name="termsAccepted" required> 
+            I Accept <a href="#">Terms & Conditions</a> of Company
+            <div class="invalid-feedback">
+                Please accept the terms and conditions.
+            </div>
+        </label>
+    </div>
+    
+  
+      <div class="row">
+        <div class="col-md-12 text-end">
+          <button type="submit" class="btn btn-primary mt-3">Update Employee</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  

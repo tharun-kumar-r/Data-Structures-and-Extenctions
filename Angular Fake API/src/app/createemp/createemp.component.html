@@ -1,0 +1,83 @@
+<div class="container mt-5">
+    <h2>Create New Employee</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+
+
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+
+                    <input type="text" hidden id="Id" class="form-control" formControlName="Id" >
+
+                    <input type="text" id="FName" class="form-control" formControlName="FName" placeholder="First Name">
+                    <label for="FName">First Name</label>
+                    <div *ngIf="employeeForm.get('FName')?.invalid && employeeForm.get('FName')?.touched" class="text-danger">
+                        First Name is required and must be at least 2 characters long.
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    <input type="text" id="LName" class="form-control" formControlName="LName" placeholder="Last Name">
+                    <label for="LName">Last Name</label>
+                    <div *ngIf="employeeForm.get('LName')?.invalid && employeeForm.get('LName')?.touched" class="text-danger">
+                        Last Name is required and must be at least 2 characters long.
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    <input type="number" id="Age" class="form-control" formControlName="Age" placeholder="Age">
+                    <label for="Age">Age</label>
+                    <div *ngIf="employeeForm.get('Age')?.invalid && employeeForm.get('Age')?.touched" class="text-danger">
+                        Age is required and must be between 18 and 65.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    <input type="number" id="Salary" class="form-control" formControlName="Salary" placeholder="Salary">
+                    <label for="Salary">Salary</label>
+                    <div *ngIf="employeeForm.get('Salary')?.invalid && employeeForm.get('Salary')?.touched" class="text-danger">
+                        Salary is required and must be at least 10000.
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    <input type="text" id="Country" class="form-control" formControlName="Country" placeholder="Country">
+                    <label for="Country">Country</label>
+                    <div *ngIf="employeeForm.get('Country')?.invalid && employeeForm.get('Country')?.touched" class="text-danger">
+                        Country is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label>Gender</label>
+                <div class="form-check">
+                    <input type="radio" id="Male" class="form-check-input" formControlName="Gender" value="Male">
+                    <label for="Male" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="Female" class="form-check-input" formControlName="Gender" value="Female">
+                    <label for="Female" class="form-check-label">Female</label>
+                </div>
+                <div *ngIf="employeeForm.get('Gender')?.invalid && employeeForm.get('Gender')?.touched" class="text-danger">
+                    Gender is required.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Create Employee</button>
+    </form>
+</div>

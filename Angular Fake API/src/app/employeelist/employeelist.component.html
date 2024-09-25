@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2 class="text-left mb-4">Employee List</h2>
+    
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+            <tr *ngFor="let item of employee">
+                <td>{{item.Id}}</td>
+                <td>{{item.FName}}</td>
+                <td>{{item.LName}}</td>
+                <td>{{item.Age}}</td>
+                <td>{{item.Salary | currency: "INR"}}</td>
+                <td>{{item.Gender}}</td>
+                <td>{{item.Country}}</td>
+                <td><a class="btn btn-dark btn-sm" [routerLink]="[ '/emp/', item.Id ]">Edit</a></td>
+            </tr>
+</tbody></table></div>

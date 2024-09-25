@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "Id": 1,
+      "FName": "Tharun",
+      "LName": "Kumar",
+      "Age": 24,
+      "Salary": 100000,
+      "Gender": "Male",
+      "Country": "India"
+    },
+    {
+      "Id": 2,
+      "FName": "Amulya",
+      "LName": "M",
+      "Age": 21,
+      "Salary": 20000,
+      "Gender": "Female",
+      "Country": "USA"
+    },
+    {
+      "Id": 3,
+      "FName": "Suman",
+      "LName": "Raj",
+      "Age": 23,
+      "Salary": 30000,
+      "Gender": "Male",
+      "Country": "China"
+    },
+    {
+      "Id": 17,
+      "FName": "Rajesh",
+      "LName": "BM",
+      "Age": 25,
+      "Salary": 400000,
+      "Gender": "Female",
+      "Country": "Japan"
+    },
+    {
+      "id": "9d2d",
+      "Id": 1,
+      "FName": "Tharun",
+      "LName": "Kumar",
+      "Age": 24,
+      "Salary": 100000000,
+      "Gender": "Male",
+      "Country": "India"
+    },
+    {
+      "id": "0005",
+      "Id": 1,
+      "FName": "Tharun",
+      "LName": "Kumar RRR",
+      "Age": 24,
+      "Salary": 100000,
+      "Gender": "Male",
+      "Country": "India"
+    }
+  ]
+}
