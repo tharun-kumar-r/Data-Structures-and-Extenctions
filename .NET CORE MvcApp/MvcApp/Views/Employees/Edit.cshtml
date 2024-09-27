@@ -1,0 +1,119 @@
+﻿@model MvcApp.Models.Employee
+
+@{
+    ViewBag.Title = "Edit Employee" + ViewBag.id;
+}
+
+<h2>Edit Employee [ @ViewBag.id  ]</h2>
+
+@using (Html.BeginForm("edit", "Employees", FormMethod.Post, new { novalidate = "novalidate" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.Id, new { disabled="true", @class = "form-control", placeholder = "Employee ID" })
+                @Html.LabelFor(m => m.Id)
+                @Html.ValidationMessageFor(m => m.Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+</div>
+    <div class="row">
+
+        
+       
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "First Name" })
+                @Html.LabelFor(m => m.FirstName)
+                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control", placeholder = "Middle Name" })
+                @Html.LabelFor(m => m.MiddleName)
+                @Html.ValidationMessageFor(m => m.MiddleName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Last Name" })
+                @Html.LabelFor(m => m.LastName)
+                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.Salary, new { type = "number", @class = "form-control", placeholder = "Salary" })
+                @Html.LabelFor(m => m.Salary)
+                @Html.ValidationMessageFor(m => m.Salary, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.Email, new { type = "email", @class = "form-control", placeholder = "Email" })
+                @Html.LabelFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.PhoneNumber, new { type = "text", @class = "form-control", placeholder = "Phone Number" })
+                @Html.LabelFor(m => m.PhoneNumber)
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Address" })
+                @Html.LabelFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+
+
+                @Html.DropDownListFor(m => m.Country, (SelectList)ViewBag.CountryList, new { @class = "form-control" })
+                @Html.LabelFor(m => m.Country)
+                @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.Age, new { type = "number", @class = "form-control", placeholder = "Age" })
+                @Html.LabelFor(m => m.Age)
+                @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", type = "date", placeholder = "Date of Birth" })
+                @Html.LabelFor(m => m.DateOfBirth)
+                @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+}

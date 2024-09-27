@@ -1,0 +1,40 @@
+﻿@model Employee_Management.Models.Register
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="card shadow-sm p-4">
+                    <h3 class="text-center mb-4">Register</h3>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.Email, new { @class = "form-label" })
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Email" })
+                        @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.Password, new { @class = "form-label" })
+                        @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Password" })
+                        @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.ConfirmPassword, new { @class = "form-label" })
+                        @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password" })
+                        @Html.ValidationMessageFor(x => x.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <p>Already have an account? <a href="/" class="text-primary">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

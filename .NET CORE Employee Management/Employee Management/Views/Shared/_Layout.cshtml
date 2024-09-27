@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Employee_Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Employee_Management.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background:black !important">
+            <div class="container-fluid">
+              
+    <a class="navbar-brand" href="/"><img height="60" style="margin-left:10px" src="data:image/png;base64,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"/></a>
+   
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        @if (Context.Session.GetString("UserEmail") == null)
+                        {
+                  
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Login</a>
+                            </li>
+                        }
+                        else
+                        {
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        }
+                         
+                          
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!--
+    <footer class="border-top footer text-muted">
+        <div class="container">
+         &copy; 2024 - Employee_Management - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
